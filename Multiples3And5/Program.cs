@@ -37,10 +37,10 @@ namespace Multiples3And5
                 {
                     Mutliples3And5.Add(i);
                 }
-                else if (i % 3 == 0 && i % 5 == 0)
-                {
-                    Mutliples3And5.Remove(i);
-                }
+                //else if (i % 3 == 0 && i % 5 == 0)
+                //{
+                //    Mutliples3And5.Remove(i);
+                //}
             }
             Console.WriteLine();
             Console.WriteLine(Mutliples3And5.Sum());
