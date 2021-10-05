@@ -19,14 +19,14 @@ namespace Multiples3And5
 
             Console.WriteLine("If we list all the natural numbers below 10 that are multiples of 3 or 5, we get 3, 5, 6 and 9. The sum of these multiples is 23.  Find the sum of all the multiples of 3 or 5 below 1000 and print it out to the console.\n\nPress any button to see the answer:");
             Console.ReadKey();
+            Console.WriteLine();
 
-            int userNbr = 1000;
             List<int> Mutliples3And5 = new List<int>();
 
 
             Console.Title = "ARTP - Coding Challenge 1";
 
-            for (int i = 1; i < userNbr; i++)
+            for (int i = 1; i < 1000; i++)
             {
 
                 if (i % 3 == 0)
@@ -42,8 +42,22 @@ namespace Multiples3And5
                 //    Mutliples3And5.Remove(i);
                 //}
             }
-            Console.WriteLine();
+            Console.WriteLine("Solution 1:");
             Console.WriteLine(Mutliples3And5.Sum());
+            Console.WriteLine();
+
+
+            Console.WriteLine("Solution 2:");
+            //Solution 2
+            int totalSum = 0;
+            for (int i = 0; i < 1000; i++)
+            {
+                if (i % 3 == 0 || i % 5 == 0)
+                {
+                    totalSum += i;
+                }
+            }
+            Console.WriteLine(totalSum);
 
         }
     }
