@@ -21,6 +21,8 @@ namespace Multiples3And5
             Console.ReadKey();
             Console.WriteLine();
 
+
+            //Solution 1 ------------------------------------------------------------------
             List<int> Mutliples3And5 = new List<int>();
 
 
@@ -48,7 +50,7 @@ namespace Multiples3And5
 
 
             Console.WriteLine("Solution 2:");
-            //Solution 2
+            //Solution 2--------------------------------------------------------------
             int totalSum = 0;
             for (int i = 0; i < 1000; i++)
             {
@@ -58,7 +60,12 @@ namespace Multiples3And5
                 }
             }
             Console.WriteLine(totalSum);
+            Console.WriteLine();
 
+            //Solution 3 --------------------------------------------------------------
+            Console.WriteLine("Solution 3:");
+            Console.WriteLine(Enumerable.Range(0, 1000).Where(n => n % 3 == 0 || n % 5 == 0).Sum()
+);
         }
     }
 }
